@@ -2,7 +2,7 @@
 
 **Course:** VinUniversity AI Lab · Phase 2 Day 5  
 **Project:** `phase2-day5-multi-agent-lab`  
-**Author:** _[Your name]_  
+**Author:** Nguyen Hoang Minh  
 **Date:** 2026-06-24  
 
 ---
