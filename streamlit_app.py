@@ -6,12 +6,21 @@ Run: streamlit run streamlit_app.py
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+
+# Streamlit keeps imported packages in sys.modules across reruns; drop stale lab code.
+for _module_name in sorted(
+    (name for name in sys.modules if name.startswith("multi_agent_research_lab.")),
+    key=len,
+    reverse=True,
+):
+    del sys.modules[_module_name]
 
 from multi_agent_research_lab.core.config import get_settings
 from multi_agent_research_lab.core.errors import AgentExecutionError
